@@ -1,0 +1,341 @@
+/* Global Styles */
+body {
+    font-family: 'Times', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1919; /* Dark background */
+    color: #fff;
+}
+
+/* HEADER SECTION */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgb(15, 15, 15);
+}
+
+/* Logo Section */
+.banner {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px; /* Adjusted spacing between menu items */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 15px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    text-decoration:underline;
+}
+
+/* TAGLINE SECTION */
+.tagline {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    background-color: #444;
+    padding: 10px 0;
+    color: #e7bc12;
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Animation for Moving Text */
+.tagline span {
+    display: inline-block;
+    animation: moveText 15s linear infinite; /* Adjust speed as needed */
+}
+
+/* Keyframes for moving text */
+@keyframes moveText {
+    from {
+        transform: translateX(500%);
+    }
+    to {
+        transform: translateX(-150%);
+    }
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    background-color: #111;
+}
+
+/* Hero Text - Positioned on the left */
+.hero-text {
+    width: 50%;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1.3;
+    padding: 20px
+}
+
+.hero-text p {
+    font-size: 16px;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+/* Hero Image - Positioned on the right */
+.hero-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ABOUT US SECTION */
+.about {
+    background: linear-gradient(to right, #111919 60%, #c6c2c2 50%);
+    color: #fff;
+    padding: 200px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns content to the left */
+}
+
+.about-container {
+    max-width: 600px;
+}
+
+.about-container h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-left: 3px solid #e7bc12;
+    padding-left: 15px;
+}
+
+.about-container p {
+    font-size: 25px;
+    line-height: 1.6;
+    border-left: 3px solid #e7bc12;
+    padding-left: 15px;
+}
+
+/* PRODUCT SECTION */
+.product {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 150px 5%;
+    text-align: center;
+}
+.product-image {
+    width: 10%;
+    border-radius: 30px;
+    display: block;
+}
+.product-image img {
+    max-width: 20%;
+    height: auto;
+}
+
+.product-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: -60px;
+    text-align: center;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 60px;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #111;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.product-details {
+    padding: 10px;
+}
+
+.product-details h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.product-details p {
+    font-size: 16px;
+    font-weight: normal;
+    color: #e7bc12;
+}
+
+/* Order Now Button */
+.order-btn {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.order-btn:hover {
+    background-color: #d4a812;
+    color: #000000;
+}
+/* Pagination */
+.pagination {
+    margin-top: -90px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.page {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.page:hover,
+.page.active {
+    background-color: #e7bc12;
+    color: #000;
+    border-color: #e7bc12;
+}
+
+.page.next {
+    width: 40px;
+}
+
+/* CONTACT US SECTION */
+.contact {
+    background: linear-gradient(to right, #000000 60%, #000000 50%);
+    color: #fff;
+    padding: 200px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.contact-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-image {
+    width: 350px;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 50px;
+}
+
+.contact-right {
+    flex: 1;
+    padding-left: 6px;
+    border-left: 3px solid #e7bc12;
+}
+
+.contact-right h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-left: 15px;
+}
+
+.contact-right p {
+    font-size: 20px;
+    line-height: 1.9;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.contact-right p i {
+    margin-right: 10px;
+    color: #e7bc12;
+    font-size: 22px;
+}
+
+.contact-right a {
+    color: #e7bc12;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-right a:hover {
+    text-decoration: underline;
+}
